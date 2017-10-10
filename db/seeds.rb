@@ -1,4 +1,9 @@
+Category.destroy_all
 User.destroy_all
+
+programming = Category.create!(name: "Programming")
+cooking = Category.create!(name: "Cooking")
+languages = Category.create!(name: "Languages")
 
 arno = User.create!(
   email: 'arno@codaisseur.com',
@@ -6,7 +11,7 @@ arno = User.create!(
 )
 
 Event.create!(
-  name: "OpenHack Edition", 
+  name: "OpenHack Edition",
   description: "We are teaming up with Microsoft to bring you a special Circus event at De Hallen in Amsterdam West",
   location: "De Hallen Bellamystraat 1, Amsterdam",
   includes_food: true,
@@ -16,4 +21,5 @@ Event.create!(
   ends_at: '%I:%M:%S %p',
   capacity: 50,
   active: true,
-  user: arno)
+  user: arno,
+  categories: [programming])

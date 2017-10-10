@@ -50,6 +50,14 @@
 
    <hr>
 
+   <label>Themes</label>
+
+  <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |b| %>
+    <div class="form-group">
+      <%= b.check_box(class: "check_box") %> <%= b.object.name %>
+    </div>
+  <% end %>
+
    <label>Publish this event?</label>
 
    <div class="form-group">
