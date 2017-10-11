@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :profiles, only: [:new, :edit, :create, :update]
 
   get "about" => "pages#about"
+  get "terms" => "pages#terms"
 end
