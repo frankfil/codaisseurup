@@ -5,7 +5,7 @@ FactoryGirl.define do
     location        "De Hallen Bellamystraat 1 Amsterdam"
     includes_food   true
     includes_drinks true
-    price           10
+    price           Faker::Commerce.price
     starts_at       Faker::Date.forward(1)
     ends_at         Faker::Date.forward(2)
     capacity        50
