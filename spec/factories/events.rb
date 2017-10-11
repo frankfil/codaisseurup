@@ -11,13 +11,12 @@ FactoryGirl.define do
     capacity        50
     active          true
     user            { build(:user)}
-    categories      [programming]
 
-    trait active do
+    trait :active do
       active true
     end
 
-    trait inactive do
+    trait :inactive do
       active false
     end
   end
