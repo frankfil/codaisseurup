@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   get "about" => "pages#about"
   get "terms" => "pages#terms"
+
+  resources :photos, only: [:show, :destroy]
 end

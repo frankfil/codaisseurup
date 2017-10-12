@@ -32,7 +32,8 @@ class EventsController < ApplicationController
     if current_user.id == @event.user.id
       @photos = @event.photos
     else
-      redirect_to root_path, notice "You don't have permission"
+      redirect_to root_path, notice: "You don't have permission"
+    end
   end
 
   def update
