@@ -65,7 +65,7 @@ event_3 = Event.create!(
 
 
   # Photos
-  photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507802271/hands-people-woman-meeting_sd92zy.jpg", event: event_1)
-  photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507802253/pexels-photo-169198_wxmimq.jpg", event: event_1)
-  photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507802230/pexels-photo-296878_gcaq9d.jpg", event: event_2)
-  photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507802206/pexels-photo-433452_m9vjdh.jpg", event: event_3)
+  photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507815750/hands-people-woman-meeting_h4ngrj.jpg", event: event_1)
+  photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507815735/pexels-photo-169198_wobmwq.jpg", event: event_1)
+  photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507815721/pexels-photo-296878_k7maez.jpg", event: event_2)
+  photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507815709/pexels-photo-433452_igaweb.jpg", event: event_3)
