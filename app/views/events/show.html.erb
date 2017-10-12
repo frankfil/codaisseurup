@@ -32,9 +32,14 @@
 <%= link_to "Back", events_path, class: "btn btn-default" %>
 
 <h4>Photos</h4>
-<% @event.photos.each do |photo| %>
-  <%= image_tag photo.image %>
-<% end %>
+<div class="row">
+  <% @event.photos.each do |photo| %>
+    <div class="col-md-4">
+      <%= image_tag photo.image, class: "img-responsive img-rounded" %>
+    </div>
+  <% end %>
+</div>
+
 
 <h4>Categories</h4>
 <% @categories.each do |category| %>
