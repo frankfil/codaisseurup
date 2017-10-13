@@ -69,3 +69,8 @@ event_3 = Event.create!(
   photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507815735/pexels-photo-169198_wobmwq.jpg", event: event_1)
   photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507815721/pexels-photo-296878_k7maez.jpg", event: event_2)
   photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dfg4uic75/image/upload/v1507815709/pexels-photo-433452_igaweb.jpg", event: event_3)
+
+  ## bookings
+
+  Registration.create!(event: event_1, user: user2, status: "booked", price: 50, guests_count: 1)
+  Registration.create!(event: event_1, user: user3, status: "booked", price: 100, guests_count: 2)
