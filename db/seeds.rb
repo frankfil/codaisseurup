@@ -72,5 +72,5 @@ event_3 = Event.create!(
 
   ## bookings
 
-  Registration.create!(event: event_1, user: user2, status: "booked", price: 50, guests_count: 1)
-  Registration.create!(event: event_1, user: user3, status: "booked", price: 100, guests_count: 2)
+  Registration.create!(event: event_1, user: user2, price: 0, status: "booked", guests_count: 1)
+  Registration.create!(event: event_1, user: user3, price: 0, status: "booked", guests_count: 2)

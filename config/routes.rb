@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   get "terms" => "pages#terms"
 
   resources :photos, only: [:show, :destroy]
+
+  resources :events do
+    resources :registrations, only: [:create]
+  end
 end
