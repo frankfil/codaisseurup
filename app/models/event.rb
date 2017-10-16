@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   has_and_belongs_to_many :categories
-  has_many :photos
+  has_many :photos, dependent: :destroy
 
   has_many :registrations, dependent: :destroy
   has_many :guests, through: :registrations, source: :user
@@ -23,6 +23,16 @@ class Event < ApplicationRecord
 
   scope :published, -> { where(active: true) }
 
+  def self.starts_before_ends_after(arrival, departure)
+    where('starts_at < ? AND ends_at > ?', arrival, departure)
+  end
 
+  scope :start_during, ->(arrival, departure){
+    where('starts_at > ? AND starts_at < ?', arrival, departure)
+  }
+
+  scope :ends_during, ->(arrival, departure){
+    where('ends_at > ? AND ends_at < ?', arrival, departure)
+  }
 
 end
