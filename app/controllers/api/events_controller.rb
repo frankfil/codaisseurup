@@ -61,10 +61,3 @@ class Api::EventsController < ApplicationController
       .require(:event).permit(:name, :description, :location, :includes_food, :includes_drinks, :price, :starts_at, :ends_at, :capacity, :active, category_ids: [])
   end
 end
-
-# curl -i -H "Accept: application/json" -H "Content-type: application/json" -X PUT -d '{"name":"New title"}' http://localhost:3000/api/events/1
-#
-# curl -i -H "Accept: application/json" -H "Content-type: application/json" -X PUT -d '{"name":"New title"}' http://localhost:3000/api/events/1
-# curl -i -H "Accept: application/json" -X POST -d '{"name":"House", "description":"Shared", "location":"Utrecht", "includes_food":false, "includes_drinks":true, "price":1, "capacity":4, "starts_at":DateTime.now(), "ends_at":DateTime.now(), "active":true, "category_ids":[]}' http://localhost:3000/api/events
-#
-# curl -i -H "Accept: application/json" -X POST -d '{"name":"Any", "description":"Shared", "location":"Utrecht", "price":1, "capacity":4, "includes_food":false, "includes_drinks":true, "starts_at":DateTime.now(), "ends_at":DateTime.now(), "active":true, "category_ids":[],' http://localhost:3000/api/events
